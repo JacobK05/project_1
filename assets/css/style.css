@@ -1,0 +1,36 @@
+/* tailmind styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+Body { background-size:cover ;background-image: -webkit-image-set(cover);
+background:url('./Resturant1.jpg');
+}
+
+.flex-container
+
+.topMenuBar {
+    display: flex;
+    justify-content: start;
+    background-color: chocolate;
+}
+.flex-container {display: flex;
+    justify-content: end;
+    flex-direction: row;
+    align-items: center;
+
+}
+.flex-item {
+display:flex;
+justify-content: end;
+padding: 10px;
+margin: 0;
+
+
+}
+
+
+
+
+
