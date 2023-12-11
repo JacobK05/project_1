@@ -7,6 +7,35 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <img class="logo" src="logo.jpg" alt="Your Logo">
+    
+        <a href="#">Logo</a>
+        <nav>
+            <a href="#">ABOUT US</a>
+            <a href="#">RESTAURANTS</a>
+            <a href="#">HOTEL</a>
+            <a href="#">YOUR LIST</a>
+        </nav>
+    
+        <div class="banner">
+            <div class="slogan">
+                <p>Slogan</p>
+            </div>
+        </div>
+    
+        <div class="input-wrapper">
+            <input type="text" id="zipcodeInput" placeholder="Enter Zip Code">
+            <button style="background-color: #ED7D32; padding-top: 5px; padding-left: 0px; padding-right: 0px; margin-top: 20px;" onclick="convertZipToLatLong()">Convert Zip</button>
+        </div>
+    
+        <div id="location"></div>
+    
+    <button style="background-color: #ED7D32; padding: 20px; display: block; margin: 0 auto;" onclick="findNearbyRestaurants()">Find Nearby Restaurants</button>
+    
+
+        <div id="restaurants"></div>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
