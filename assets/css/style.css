@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ED7D32;
+    color: #ffffff;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 100px;
+    height: auto;
+}
+
+nav {
+    background-color: #ED7D32;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.banner {
+    position: relative;
+    background-image: url("banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.slogan {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    text-align: right;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.input-wrapper {
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 340px;
+    border: 2px solid #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #ED7D32;
+    color: #000000;
+    border: none;
+}
+
+/* Additional Input */
+.additional-input-wrapper {
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+    width: 340px;
+    border: 2px solid #000000;
+}
+
+.additional-input {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #ED7D32;
+    color: #000000;
+    border: none;
+}
+
+/* New Section */
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.restaurant-section {
+    border-radius: 15px;
+    width: 85%;
+    border: 2px solid #000000;
+    padding: 10px;
+}
+
+.save-section {
+    border-radius: 15px;
+    width: 10%;
+    border: 2px solid #000000;
+    padding: 10px;
+}
