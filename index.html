@@ -25,16 +25,17 @@
         </div>
     
         <div class="input-wrapper">
-            <input type="text" id="zipcodeInput" placeholder="Enter Zip Code">
-            <button style="background-color: #ED7D32; padding-top: 5px; padding-left: 0px; padding-right: 0px; margin-top: 20px;">Confirm</button>
-        </div>
-    
-        <div id="location"></div>
-    
-    <button style="background-color: #ED7D32; padding: 20px; display: block; margin: 0 auto;">Find Nearby Restaurants</button>
-    
-
-        <div id="restaurants"></div>
+// Input section for zip code conversion
+    <div class="input-wrapper">
+        <input type="text" id="zipcodeInput" placeholder="Enter Zip Code" >
+        <button style="background-color: #ED7D32; padding-top: 5px; padding-left: 20px; padding-right: 20px; margin-top: 20px;" onclick="convertZipAndFindRestaurants()">Find restaurants</button>
+    </div>
+//Display location information
+    <div id="location"></div>
+// Display nearby restaurants
+    <div id="restaurants"></div>
+// Display saved restaurants
+    <div id="savedRestaurants"></div>
     </div>
 
     <script src="./assets/js/script.js"></script>
