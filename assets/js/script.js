@@ -1,10 +1,10 @@
 // Function 1: Convert from zip code to latitude and longitude
 // API Key: 24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27
 async function convertZipToLatLong() {
-  const zipCode = document.getElementById('zipcodeInput').value;
+  var zipCode = document.getElementById('zipcodeInput').value;
 
   try {
-    const response = await fetch(`https://us-zip-code-information.p.rapidapi.com/?zipcode=${zipCode}`, {
+    var zipCodeResponse = await fetch(`https://us-zip-code-information.p.rapidapi.com/?zipcode=${zipCode}`, {
       method: 'GET',
       headers: {
         'X-RapidAPI-Key': '24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27',
@@ -13,26 +13,15 @@ async function convertZipToLatLong() {
       credentials: 'include',
     });
 
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
+    if (!zipCodeResponse.ok) {
+      throw new Error(`Error: ${zipCodeResponse.statusText}`);
     }
 
-    const data = await response.json();
-    const { Latitude, Longitude } = data[0]; // Assuming the first element is the desired one
+    var zipCodeData = await zipCodeResponse.json();
+    var { Latitude, Longitude } = zipCodeData[0]; // Assuming the first element is the desired one
     document.getElementById('location').innerText = `Latitude: ${Latitude}, Longitude: ${Longitude}`;
-  } catch (error) {
-    console.error('Error:', error.message);
-  }
-}
 
-// Function 2: From latitude and longitude, search nearby restaurant
-// API Key: 24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27
-async function findNearbyRestaurants() {
-  const locationText = document.getElementById('location').innerText;
-  const [latitude, longitude] = locationText.replace('Latitude: ', '').replace('Longitude: ', '').split(', ');
-
-  try {
-    const response = await fetch(`https://map-places.p.rapidapi.com/nearbysearch/json?location=${latitude.trim()},${longitude.trim()}&radius=1500&type=restaurant`, {
+    var restaurantResponse = await fetch(`https://map-places.p.rapidapi.com/nearbysearch/json?location=${Latitude.trim()},${Longitude.trim()}&radius=1500&type=restaurant`, {
       method: 'GET',
       headers: {
         'X-RapidAPI-Key': '24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27',
@@ -41,19 +30,19 @@ async function findNearbyRestaurants() {
       credentials: 'include',
     });
 
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
+    if (!restaurantResponse.ok) {
+      throw new Error(`Error: ${restaurantResponse.statusText}`);
     }
 
-    const data = await response.json();
-    console.log("API Response:", data); // Log the entire response for debugging
+    var restaurantData = await restaurantResponse.json();
+    console.log("API Response:", restaurantData); // Log the entire response for debugging
 
-    if (!data.results) {
+    if (!restaurantData.results) {
       document.getElementById('restaurants').innerHTML = '<p>No restaurants found.</p>';
       return;
     }
 
-    const restaurants = data.results;
+    var restaurants = restaurantData.results;
     let output = '';
     for (let restaurant of restaurants) {
       output += `
@@ -68,8 +57,19 @@ async function findNearbyRestaurants() {
       `;
     }
     document.getElementById('restaurants').innerHTML = output;
+
   } catch (error) {
     console.error('Error:', error.message);
     document.getElementById('restaurants').innerHTML = `<p>Error loading restaurants: ${error.message}</p>`;
   }
 }
+
+var zipCodeInput = document.getElementById('zipcodeInput');
+zipCodeInput.addEventListener('click', convertZipToLatLong)
+  
+
+
+
+
+// Function 2: From latitude and longitude, search nearby restaurant
+// API Key: 24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27
