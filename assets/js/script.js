@@ -1,5 +1,5 @@
 // Function 1: Convert from zip code to latitude and longitude
-// API Key: 24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27
+// API Key: 2eb2279785mshb15d3abd03b9c13p1b6c39jsn27fbb446ee6a
 async function convertZipAndFindRestaurants() {
   var zipCode = document.getElementById('zipcodeInput').value;
   
@@ -7,7 +7,7 @@ async function convertZipAndFindRestaurants() {
     var latLongResponse = await fetch(`https://us-zip-code-information.p.rapidapi.com/?zipcode=${zipCode}`, {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27',
+        'X-RapidAPI-Key': '2eb2279785mshb15d3abd03b9c13p1b6c39jsn27fbb446ee6a',
         'X-RapidAPI-Host': 'us-zip-code-information.p.rapidapi.com'
       }
     });
@@ -19,7 +19,7 @@ async function convertZipAndFindRestaurants() {
     var restaurantResponse = await fetch(`https://map-places.p.rapidapi.com/nearbysearch/json?location=${Latitude},${Longitude}&radius=1500&type=restaurant`, {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '24e3f31283msheb85953a5ee099dp1851a5jsna42869b20f27',
+        'X-RapidAPI-Key': '2eb2279785mshb15d3abd03b9c13p1b6c39jsn27fbb446ee6a',
         'X-RapidAPI-Host': 'map-places.p.rapidapi.com'
       }
     });
