@@ -110,6 +110,8 @@ function saveHotel(hotelName) {
   }
 }
 
+
+
 // Function to display saved restaurants
 function displaySavedRestaurants() {
   let savedRestaurants = JSON.parse(localStorage.getItem('savedRestaurants')) || [];
@@ -141,6 +143,15 @@ function displaySavedHotels() {
   }
   document.getElementById('savedHotels').innerHTML = output;
 }
+
+
+// Add a button to clear local storage
+document.getElementById('removeBtn').addEventListener('click', () => {
+    localStorage.clear();
+    displaySavedRestaurants();
+    displaySavedHotels();
+  });
+  
 
 // Initialize the page with saved lists
 document.addEventListener('DOMContentLoaded', () => {

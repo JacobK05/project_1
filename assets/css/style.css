@@ -156,6 +156,10 @@ nav a {
     background-color: #F3F4F6;
     border-radius: 10px;
 }
+#removeBtn {
+width: 200px;
+margin-left: 10px;
+}
 
 @media (max-width: 768px) {
     .container {
