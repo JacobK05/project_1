@@ -74,7 +74,7 @@ async function convertZipAndFindRestaurantsAndHotels() {
               <div class="hotel-section">
                   <p>${hotel.title} - ${hotel.secondaryInfo}</p>
                   <p>Rating: ${hotel.bubbleRating.rating}, Price: ${hotel.priceForDisplay}</p>
-                  <button onclick="saveHotel('${hotel.title}')">Save Hotel</button>
+                  <button class="hotel-button" onclick="saveHotel('${hotel.title}')">Save Hotel</button>
               </div>
           `;
       });
