@@ -1,26 +1,111 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
 }
 
 body {
-    margin: 10px;
-    padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #ED7D32;
-    color: #ffffff;
+    background-color: #F3F4F6;
+    color: #333;
 }
 
-.container {
-    margin: 20px;
-    padding: 20px;
+header {
+    background-color: #ED7D32;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
 }
 
 .logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    max-width: 100px;
+    max-width: 400px;
     height: auto;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.input-section {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+input, button {
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px; 
+    background-color: #ED7D32;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #ED7D32;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+
+#introduction {
+    background-color: #F7F7F7;
+    padding: 20px;
+    text-align: center;
+}
+
+.introduction-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.introduction-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.introduction-content p {
+    color: #555;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
 nav {
@@ -36,87 +121,29 @@ nav a {
     font-weight: bold;
 }
 
-.banner {
-    position: relative;
-    background-image: url("banner.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 24px;
-}
-
-.slogan {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0%, -50%);
-    text-align: right;
-    padding: 20px;
-    font-size: 18px;
-}
-
-.input-wrapper {
-    border-radius: 15px;
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto;
-    width: 340px;
-    border: 2px solid #000000;
+#savedRestaurants {
     margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-input {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    background-color: #ED7D32;
-    color: #000000;
-    border: none;
-}
-
-/* Additional Input */
-.additional-input-wrapper {
-    text-align: center;
     padding: 20px;
-    margin: 30px auto;
-    width: 340px;
-    border: 2px solid #000000;
+    background-color: #F3F4F6;
+    border-radius: 10px;
+    
 }
 
-.additional-input {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    background-color: #ED7D32;
-    color: #000000;
-    border: none;
+#savedHotels {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F3F4F6;
+    border-radius: 10px;
+   
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
-/* New Section */
-.section-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-
-.restaurant-section {
-    border-radius: 15px;
-    width: 85%;
-    border: 2px solid #000000;
-    padding: 10px;
-}
-
-.save-section {
-    border-radius: 15px;
-    width: 10%;
-    border: 2px solid #000000;
-    padding: 10px;
-}

@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styleSheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>Eat & Stay</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <img class="logo" src="logo.jpg" alt="Your Logo">
-    
-        <a href="#">Logo</a>
-        <nav>
-            <a href="#">ABOUT US</a>
-            <a href="#">RESTAURANTS</a>
-            <a href="#">HOTEL</a>
-            <a href="#">YOUR LIST</a>
-        </nav>
-    
-        <div class="banner">
-            <div class="slogan">
-                <p>Slogan</p>
-            </div>
-        </div>
-    
-        <div class="input-wrapper">
-            <input type="text" id="zipcodeInput" placeholder="Enter Zip Code" >
-            <button style="background-color: #ED7D32; padding-top: 5px; padding-left: 20px; padding-right: 20px; margin-top: 20px;" onclick="convertZipAndFindRestaurants()">Find restaurants</button>
-        </div>
-    
-        <div id="location"></div>
-        <div id="restaurants"></div>
-    </div>
 
-    <script src="./assets/js/script.js"></script>
+<header>
+    <img class="logo" src="./assets/images/logo.png" alt="Your Logo">
+    <nav>
+        <a href="#introduction">OUR STORY</a>
+        <a href="yourlist.html">YOUR LIST</a>
+    </nav>
+</header>
+
+<main>
+    <section class="banner">
+        <p class="slogan">Get the best or nothing at all.</p>
+    </section>
+
+    <section id="introduction">
+        <div class="introduction-content">
+            <h2>Welcome to Our Website</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+
+    <section class="input-section">
+        <input type="text" id="zipcodeInput" placeholder="Enter Zip Code">
+        <button onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants</button>
+    </section>
+
+    <div id="location"></div>
+    <div id="restaurants"></div>
+    <div id="hotels"></div>
+    <div id="savedRestaurants"></div>
+    <div id="savedHotels"></div>
+</main>
+
+<footer>
+    <p>Contact us: email@example.com | +123 456 7890</p>
+</footer>
+
 </body>
 </html>
