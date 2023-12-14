@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #ED7D32;
+    background-color: #5D5C61;
     color: #fff;
     padding: 15px 0;
     text-align: center;
@@ -66,13 +66,33 @@ input, button {
 
 button {
     margin-top: 10px; 
-    background-color: #ED7D32;
+    background-color: #557A95;
     color: #ffffff;
     cursor: pointer;
 }
+.save-section{
+width: 200px;
+padding-left: 10px;
+}
+
+.restaurant-section{
+ padding-left: 20px;
+ margin: 5px;
+ font-size: 20px;
+}
+.hotel-button{
+width: 200px;
+padding-left: 10px;
+}
+
+.hotel-section{
+padding-left: 5px;
+margin: 5px;
+font-size: 20px;
+}
 
 footer {
-    background-color: #ED7D32;
+    background-color: #5D5C61;
     color: #fff;
     text-align: center;
     padding: 15px 0;
@@ -109,9 +129,10 @@ footer {
 }
 
 nav {
-    background-color: #ED7D32;
+    background-color: #5D5C61;
     padding: 10px;
     text-align: center;
+    
 }
 
 nav a {
@@ -134,7 +155,7 @@ nav a {
     padding: 20px;
     background-color: #F3F4F6;
     border-radius: 10px;
-   
+}
 
 @media (max-width: 768px) {
     .container {
