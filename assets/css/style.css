@@ -12,42 +12,42 @@ body {
 }
 
 header {
-    background-color: #5D5C61;
-    color: #fff;
+    background-color: #5D5C61; 
+     color: #fff;
     padding: 15px 0;
     text-align: center;
 }
 
-.logo {
+/* .logo {
     max-width: 400px;
-    height: auto;
+    height: auto; */
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
-   display: flex;
-    font-weight: bold;text-align: center;
+   
+    font-weight: bold;
 }
 
-.banner {
+/* .banner {
     background-image: url('banner.jpg');
     background-size: cover;
     background-position: center;
     height: 450px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
-.slogan {
+/* .slogan {
     font-size: 24px;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000;
-}
+} */
 
-.input-section {
+/* .input-section {
     text-align: center;
     padding: 20px;
     margin: 20px auto;
@@ -55,7 +55,7 @@ nav a {
     max-width: 400px;
     border: 2px solid #ccc;
     border-radius: 15px;
-}
+} */
 
 input, button {
     padding: 10px;
@@ -65,14 +65,14 @@ input, button {
     border-radius: 5px;
 }
 
-button {
-    margin-top: 10px; 
-    background-color: #557A95;
-    color: #ffffff;
-    cursor: pointer;
+/* button { */
+    /* margin-top: 10px; width: 200px;height:30px ; */
+    /* background-color: #557A95; */
+    /* color: #ffffff; */
+    /* cursor: pointer; */
 }
 .save-section{
-width: 200px;
+width: 200px; height:150px ;
 padding-left: 10px;
 }
 

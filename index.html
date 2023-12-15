@@ -9,14 +9,27 @@
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
 </head>
 <body>
-<header class="has-background-grey">
+<header class="has-background-grey" style=" background-color: #5D5C61;
+color: #fff;
+padding: 15px 0;
+text-align: center;">
     <div class="hero-body has-text-centered">
         <div class="nav">
             <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
-             <div class="navbar-menu has-text-centered" id="navbar">
-                <nav class="navbar-end columns is-gapless">
+             <div class="navbar-menu has-text-centered"  style="color: #ffffff;
+             text-decoration: none;
+             margin: 0 15px;
+             font-weight: bold;"
+             
+             
+              id="navbar">
+                <nav class="navbar-item is-gapless">
                     <div class="column is-narrow has-text-white">
-                        <a href="story.html" class="navbar-item has-text-white is-size-4 ">OUR STORY</a></div>
+                        <a href="story.html" class="navbar-item has-text-white is-size-4" style="color: #ffffff;
+                        text-decoration: none;
+                        margin: 0 15px;
+                       
+                        font-weight: bold; ">OUR STORY</a></div>
 
                         <div class="column is-narrow has-text-white-ter "><a href="yourlist.html" class="navbar-item has-text-white is-size-4">YOUR LIST</a></div>   
                     </nav>
@@ -35,25 +48,16 @@
         </div>
         
 
-    <section id="introduction">
-        <div class="introduction-content has-text-centered has-background-grey is-size-5">
-            <h2>Welcome to Our Website</h2>
-            <p>We helps you to  make reservations and discover new dining experiences with ease!</p>
-        </div>
-    </section>
-
-    <section class="input-section hero has-background-grey">
-        <div class="container custom-border has-background-grey ">
-
-            <div class="field has-addons ">
-<div class="control mb-6">
-   
-        <input type="text"id="zipcodeInput" placeholder="Enter Zip Code"></div>
-        <div class="control mb-2">
-            <button onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
-        </div>
-    </div>
-</div>
+        <section class="input-section hero has-background-grey">
+            <div class="container custom-border">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input class="input" type="text" id="zipcodeInput" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="control">
+                        <button class="button is-info" onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
+                    </div>
+                </div>
         <div class=" is-size-4 has-text-black">
 <div class="has-background-grey button is-info "id="location"></div>
 <div class="has-background-grey" id="restaurants"></div>
