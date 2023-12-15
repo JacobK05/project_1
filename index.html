@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat & Stay</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
 </head>
 <body>
 <header class="has-background-grey">
-    <div class="hero-body">
-        <div class=" container has-text-centered">
+    <div class="hero-body has-text-centered">
+        <div class="nav">
             <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
              <div class="navbar-menu has-text-centered" id="navbar">
                 <nav class="navbar-end columns is-gapless">
@@ -43,28 +44,30 @@
 
     <section class="input-section hero has-background-grey">
         <div class="container custom-border has-background-grey ">
-<div class="control mb-4">
+
+            <div class="field has-addons ">
+<div class="control mb-6">
    
         <input type="text"id="zipcodeInput" placeholder="Enter Zip Code"></div>
-        <div class="control mb-4">
+        <div class="control mb-2">
             <button onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
         </div>
     </div>
-        
-    
-
-    <div id="location"></div>
-    <div id="restaurants"></div>
-    <div id="hotels"></div>
-    <div id="savedRestaurants"></div>
-    <div id="savedHotels"></div>
+</div>
+        <div class=" is-size-4 has-text-black">
+<div class="has-background-grey button is-info "id="location"></div>
+<div class="has-background-grey" id="restaurants"></div>
+<div class="has-background-grey" id="hotels"></div>
+<div class="has-background-grey" id="savedRestaurants"></div>
+<div class="has-background-grey" id="savedHotels"></div>
+</div>
 </main>
 <div class="section has-background-grey ">
-    <div class="container has-text-centered has-background-grey ">
-      <button id="removeBtn" class="button is-danger">Remove</button>
+    <div class="container has-text-centered has-background-grey is-size-5 ">
+      <button id="removeBtn" class="button is-info button is-large ">Remove</button>
     </div>
 </div>
-<footer class="footer has-background-grey">
+<footer class="footer has-background-grey has-text-centered is-size-5">
     <p>Contact us: email@example.com | +123 456 7890</p>
     <div class="footer-bottom">
     <p>& copy; 2023your Company.All rights reserved </p>

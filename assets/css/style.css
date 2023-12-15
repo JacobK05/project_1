@@ -27,7 +27,8 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
-    font-weight: bold;
+   display: flex;
+    font-weight: bold;text-align: center;
 }
 
 .banner {
