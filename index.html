@@ -4,35 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat & Stay</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script src="./assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
 </head>
 <body>
+<header class="has-background-grey">
+    <div class="hero-body">
+        <div class=" container has-text-centered">
+            <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
+            <div class="navbar-menucontainer has-text-centered " id="navbar">
+                <nav class="navbar-end columns is-gapless ">
+                    <div class=" container is-narrow has-text-white">
+                        <a href="story.html" class="navbar-item has-text-white is-size-4 container has-text-centered  ">OUR STORY</a></div>
 
-<header>
-    <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
-    <nav>
-        <a href="story.html">OUR STORY</a>
-        <a href="yourlist.html">YOUR LIST</a>
-    </nav>
+                        <div class="column is-narrow has-text-white-terhas-text-centered "><a href="yourlist.html" class="navbar-item has-text-white is-size-4">YOUR LIST</a></div>   
+                    </nav>
+                </div> 
+                </div>
+            </div>               
 </header>
 
-<main>
-    <section class="banner">
-        <p class="slogan">Get the best or nothing at all.</p>
-    </section>
+<main class="Section">
+    <section class="hero has-background-grey">
+        <img src="./assets/css/banner.jpg" alt="banner">
+        <div class="hero-body">
+            <div class="container has-text-centered"><p class="slogan has-text-white is-size-3 ">Get the best or nothing at all.</p>
+            </section>
+        </div>
+        </div>
+        
 
     <section id="introduction">
-        <div class="introduction-content">
+        <div class="introduction-content has-text-centered">
             <h2>Welcome to Our Website</h2>
             <p>We helps you to  make reservations and discover new dining experiences with ease!</p>
         </div>
     </section>
 
     <section class="input-section">
-        <input type="text" id="zipcodeInput" placeholder="Enter Zip Code">
-        <button onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
+        <div class="container custom-border">
+<div class="control mb-4">
+   
+        <input type="text"id="zipcodeInput" placeholder="Enter Zip Code"></div>
+        <div class="control mb-4">
+            <button onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
+        </div>
+    </div>
+        
     </section>
 
     <div id="location"></div>
@@ -41,11 +59,12 @@
     <div id="savedRestaurants"></div>
     <div id="savedHotels"></div>
 </main>
-<div>
-    <button id="removeBtn"> Remove </button>
+<div class="section">
+    <div class="container has-text-centered">
+      <button id="removeBtn" class="button is-danger">Remove</button>
+    </div>
 </div>
-
-<footer>
+<footer class="footer has-background-dark">
     <p>Contact us: email@example.com | +123 456 7890</p>
     <div class="footer-bottom">
     <p>& copy; 2023your Company.All rights reserved </p>
@@ -54,6 +73,8 @@
     </div>
 
 </footer>
+<script src="./assets/js/script.js" defer></script>
+
 
 </body>
 </html>
