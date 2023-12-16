@@ -9,44 +9,30 @@
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
 </head>
 <body>
-<header class="has-background-grey" style=" background-color: #5D5C61;
-color: #fff;
-padding: 15px 0;
-text-align: center;">
+<header class="has-background-grey" >
     <div class="hero-body has-text-centered">
         <div class="nav">
             <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
-             <div class="navbar-menu has-text-centered"  style="color: #ffffff;
-             text-decoration: none;
-             margin: 0 15px;
-             font-weight: bold;"
-             
-             
-              id="navbar">
-                <nav class="navbar-item is-gapless">
-                    <div class="column is-narrow has-text-white">
-                        <a href="story.html" class="navbar-item has-text-white is-size-4" style="color: #ffffff;
-                        text-decoration: none;
-                        margin: 0 15px;
-                       
-                        font-weight: bold; ">OUR STORY</a></div>
+             <div class="container is-flex is-justify-content-center" 
 
-                        <div class="column is-narrow has-text-white-ter "><a href="yourlist.html" class="navbar-item has-text-white is-size-4">YOUR LIST</a></div>   
+              id="navbar">
+    
+                    <div class="column is-narrow is-flex is-justify-content-center">
+                        <a href="story.html" class="navbar-item is-size-4 has-text-white is-flex is-justify-content-center">OUR STORY</a>
+                    </div>
+                    <div class="column is-narrow">
+                        <a href="yourlist.html" class="navbar-item is-size-4 has-text-white">YOUR LIST</a>
+                    </div>
+                </nav>   
                     </nav>
                 </div> 
                 </div>
             </div>               
 </header>
 
-<main class="Section">
-    <section class="hero has-background-grey">
+<main class="hero has-background-grey is-fullheight">
         <img src="./assets/css/banner.jpg" alt="banner">
-        <div class="hero-body">
-            <div class="container has-text-centered"><p class="slogan has-text-white is-size-3 ">Get the best or nothing at all.</p>
-            </section>
-        </div>
-        </div>
-        
+            <p class="slogan has-text-white is-size-2 has-text-centered mt-6  mb-6">Get the best or nothing at all.</p> 
 
         <section class="input-section hero has-background-grey">
             <div class="container custom-border">
@@ -58,9 +44,10 @@ text-align: center;">
                         <button class="button is-info" onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
                     </div>
                 </div>
-        <div class=" is-size-4 has-text-black">
+                </div>
+        <div class=" is-size-4 has-text-black justify-content: flex-start"style="padding-left: 20px;margin: 5px; font-size: 20px" >
 <div class="has-background-grey button is-info "id="location"></div>
-<div class="has-background-grey" id="restaurants"></div>
+<div class="has-background-grey"  id="restaurants"></div>
 <div class="has-background-grey" id="hotels"></div>
 <div class="has-background-grey" id="savedRestaurants"></div>
 <div class="has-background-grey" id="savedHotels"></div>
