@@ -4,49 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat & Stay</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script src="./assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
 </head>
 <body>
+<header class="has-background-grey" >
+    <div class="hero-body has-text-centered">
+        <div class="nav">
+            <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
+             <div class="container is-flex is-justify-content-center" 
 
-<header>
-    <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
-    <nav>
-        <a href="story.html">OUR STORY</a>
-        <a href="yourlist.html">YOUR LIST</a>
-    </nav>
+              id="navbar">
+    
+                    <div class="column is-narrow is-flex is-justify-content-center">
+                        <a href="story.html" class="navbar-item is-size-4 has-text-white is-flex is-justify-content-center">OUR STORY</a>
+                    </div>
+                    <div class="column is-narrow">
+                        <a href="yourlist.html" class="navbar-item is-size-4 has-text-white">YOUR LIST</a>
+                    </div>
+                </nav>   
+                    </nav>
+                </div> 
+                </div>
+            </div>               
 </header>
 
-<main>
-    <section class="banner">
-        <p class="slogan">Get the best or nothing at all.</p>
-    </section>
+<main class="hero has-background-grey is-fullheight">
+        <img src="./assets/css/banner.jpg" alt="banner">
+            <p class="slogan has-text-white is-size-2 has-text-centered mt-6  mb-6">Get the best or nothing at all.</p> 
 
-    <section id="introduction">
-        <div class="introduction-content">
-            <h2>Welcome to Our Website</h2>
-            <p>We helps you to  make reservations and discover new dining experiences with ease!</p>
-        </div>
-    </section>
-
-    <section class="input-section">
-        <input type="text" id="zipcodeInput" placeholder="Enter Zip Code">
-        <button onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
-    </section>
-<card>
-    <div id="location"></div>
-    <div id="restaurants"></div>
-    <div id="hotels"></div>
-    <div id="savedRestaurants"></div>
-    <div id="savedHotels"></div>
-</card>
-</main>
-<div>
-    <button id="removeBtn"> Remove </button>
+        <section class="input-section hero has-background-grey">
+            <div class="container custom-border">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input class="input" type="text" id="zipcodeInput" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="control">
+                        <button class="button is-info" onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
+                    </div>
+                </div>
+                </div>
+        <div class=" is-size-4 has-text-black justify-content: flex-start"style="padding-left: 20px;margin: 5px; font-size: 20px" >
+<div class="has-background-grey button is-info "id="location"></div>
+<div class="has-background-grey"  id="restaurants"></div>
+<div class="has-background-grey" id="hotels"></div>
+<div class="has-background-grey" id="savedRestaurants"></div>
+<div class="has-background-grey" id="savedHotels"></div>
 </div>
-
-<footer>
+</main>
+<div class="section has-background-grey ">
+    <div class="container has-text-centered has-background-grey is-size-5 ">
+      <button id="removeBtn" class="button is-info button is-large ">Remove</button>
+    </div>
+</div>
+<footer class="footer has-background-grey has-text-centered is-size-5">
     <p>Contact us: email@example.com | +123 456 7890</p>
     <div class="footer-bottom">
     <p>& copy; 2023your Company.All rights reserved </p>
@@ -55,6 +66,7 @@
     </div>
 
 </footer>
-
+</section>
+<script src="./assets/js/script.js" defer></script>
 </body>
 </html>
