@@ -65,7 +65,7 @@ async function convertZipAndFindRestaurantsAndHotels() {
       var hotelResponse = await fetch(hotelUrl, {
           method: 'GET',
           headers: {
-              'X-RapidAPI-Key': '5178754b6emsh6445fe33be0ad04p1b6ff8jsnb551a14e9184',
+              'X-RapidAPI-Key': '2483fe3bcdmsh626c8ea7487af6ap1137bdjsn316ab5a9048f',
               'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
           }
       });

@@ -4,51 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat & Stay</title>
-<link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
 </head>
 <body>
 
 <header>
     <img class="logo" src="./assets/images/Logo.png" alt="Your Logo">
     <nav>
-        <a href="#introduction">OUR STORY</a>
+        <a href="story.html">OUR STORY</a>
         <a href="yourlist.html">YOUR LIST</a>
     </nav>
 </header>
 
 <main>
-    <section class="banner has-background-dark has-text-centered py-6">
-        <p class="slogan is-size-4 has-text-white">Happiness... is planning a trip perfectly </p>
+    <section class="banner">
+        <p class="slogan">Get the best or nothing at all.</p>
     </section>
 
-    <section id="introduction" class="has-background-light py-6">
-        <div class="container">
-            <h2 class="is-size-3 has-text-dark">Welcome to Our Website</h2>
-            <p class="has-text-grey-dark">"A perfect trip happened as planned". We believe in this quote, that's reason why we are here today. Let us help you plan a perfect trip with this Restaurant & Hotel Finder. Please input zipcode of your disired loccation, and make your own favorite list...</p>
+    <section id="introduction">
+        <div class="introduction-content">
+            <h2>Welcome to Our Website</h2>
+            <p>We helps you to  make reservations and discover new dining experiences with ease!</p>
         </div>
     </section>
 
-    <section class="input-section has-background-light py-6">
-        <div class="container">
-            <input class="input" type="text" id="zipcodeInput" placeholder="Enter Zip Code">
-            <button class="button is-primary" onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
-        </div>
-    </section>
-
-    <div id="restaurants" class="container is-centered "></div>
-    <div id="hotels" class="container is-centered "></div>
-    <div id="savedRestaurants" class="container"></div>
-    <div id="savedHotels" class="container"></div>
+        <section class="input-section hero has-background-grey">
+            <div class="container custom-border">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input class="input" type="text" id="zipcodeInput" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="control">
+                        <button class="button is-info" onclick="convertZipAndFindRestaurantsAndHotels()">Find restaurants & hotels</button>
+                    </div>
+                </div>
+                </div>
+<div class=" is-size-4 has-text-black justify-content: flex-start has-background-grey "style="padding-left: 20px;margin: 5px; font-size: 20px" >
+<div class="has-background-grey button is-info "id="location"></div>
+<div class="has-background-grey"  id="restaurants"></div>
+<div class="has-background-grey" id="hotels"></div>
+<div class="has-background-grey" id="savedRestaurants"></div>
+<div class="has-background-grey" id="savedHotels"></div>
+</div>
 </main>
 <div>
     <button id="removeBtn"> Remove </button>
 </div>
-<footer>
-    <p>Contact us: Jacob Kaufenberg | Engdawork Kassaye | Toan Nguyen</p>
-</footer>
 
+<footer>
+    <p>Contact us: email@example.com | +123 456 7890</p>
+    <div class="footer-bottom">
+    <p>& copy; 2023your Company.All rights reserved </p>
+     <a href="pp">Privacy Policy</a>
+     <a href="tor"> Terms of Reference</a>
+    </div>
+
+</footer>
+</section>
+<script src="./assets/js/script.js" defer></script>
 </body>
 </html>
