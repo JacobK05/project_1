@@ -1,4 +1,5 @@
 
+        
 // Function 1: Convert from zip code to latitude and longitude
 async function convertZipAndFindRestaurantsAndHotels() {
   var zipCode = document.getElementById('zipcodeInput').value;
@@ -8,7 +9,7 @@ async function convertZipAndFindRestaurantsAndHotels() {
       var latLongResponse = await fetch(`https://us-zip-code-information.p.rapidapi.com/?zipcode=${zipCode}`, {
           method: 'GET',
           headers: {
-              'X-RapidAPI-Key': '2eb2279785mshb15d3abd03b9c13p1b6c39jsn27fbb446ee6a',
+              'X-RapidAPI-Key': '5178754b6emsh6445fe33be0ad04p1b6ff8jsnb551a14e9184',
               'X-RapidAPI-Host': 'us-zip-code-information.p.rapidapi.com'
           }
       });
@@ -22,7 +23,7 @@ async function convertZipAndFindRestaurantsAndHotels() {
       var restaurantResponse = await fetch(`https://map-places.p.rapidapi.com/nearbysearch/json?location=${Latitude},${Longitude}&radius=1500&type=restaurant`, {
           method: 'GET',
           headers: {
-              'X-RapidAPI-Key': '2eb2279785mshb15d3abd03b9c13p1b6c39jsn27fbb446ee6a',
+              'X-RapidAPI-Key': '5178754b6emsh6445fe33be0ad04p1b6ff8jsnb551a14e9184',
               'X-RapidAPI-Host': 'map-places.p.rapidapi.com'
           }
       });
@@ -34,14 +35,19 @@ async function convertZipAndFindRestaurantsAndHotels() {
       let output = restaurantData.results ? '' : '<p>No restaurants found.</p>';
       restaurantData.results.forEach(restaurant => {
           output += `
-              <div class="section-wrapper">
-                  <div class="restaurant-section">
+            <div class="section-wrapper is-centered columns ">
+                <div class="column is-two-third">
+                    <div class="restaurant-section box">
                       <p>${restaurant.name}</p>
-                  </div>
-                  <div class="save-section" style="text-align: center;">
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                  <div class="save-section box has-text-centered" style="text-align: center;">
                       <button onclick="saveRestaurant('${restaurant.name}')">Save</button>
                   </div>
-              </div>
+                </div>
+            </div>
           `;
       });
       document.getElementById('restaurants').innerHTML = output;
@@ -59,7 +65,7 @@ async function convertZipAndFindRestaurantsAndHotels() {
       var hotelResponse = await fetch(hotelUrl, {
           method: 'GET',
           headers: {
-              'X-RapidAPI-Key': '2eb2279785mshb15d3abd03b9c13p1b6c39jsn27fbb446ee6a',
+              'X-RapidAPI-Key': '5178754b6emsh6445fe33be0ad04p1b6ff8jsnb551a14e9184',
               'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
           }
       });
@@ -76,6 +82,7 @@ async function convertZipAndFindRestaurantsAndHotels() {
                   <p>Rating: ${hotel.bubbleRating.rating}, Price: ${hotel.priceForDisplay}</p>
                   <button class="hotel-button" onclick="saveHotel('${hotel.title}')">Save Hotel</button>
               </div>
+              
           `;
       });
       document.getElementById('hotels').innerHTML = hotelOutput;
@@ -110,8 +117,6 @@ function saveHotel(hotelName) {
   }
 }
 
-
-
 // Function to display saved restaurants
 function displaySavedRestaurants() {
   let savedRestaurants = JSON.parse(localStorage.getItem('savedRestaurants')) || [];
@@ -144,18 +149,15 @@ function displaySavedHotels() {
   document.getElementById('savedHotels').innerHTML = output;
 }
 
-
 // Add a button to clear local storage
 document.getElementById('removeBtn').addEventListener('click', () => {
     localStorage.clear();
     displaySavedRestaurants();
     displaySavedHotels();
   });
-  
 
 // Initialize the page with saved lists
 document.addEventListener('DOMContentLoaded', () => {
   displaySavedRestaurants();
   displaySavedHotels();
 });
-
