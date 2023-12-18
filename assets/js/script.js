@@ -97,9 +97,7 @@ if (!savedRestaurants.includes(restaurantName)) {
     savedRestaurants.push(restaurantName);
     localStorage.setItem('savedRestaurants', JSON.stringify(savedRestaurants));
     displaySavedRestaurants();
-} else {
-    alert('This restaurant is already saved.');
-}
+} 
 }
 
 function saveHotel(hotelName) {
@@ -108,9 +106,7 @@ if (!savedHotels.includes(hotelName)) {
     savedHotels.push(hotelName);
     localStorage.setItem('savedHotels', JSON.stringify(savedHotels));
     displaySavedHotels();
-} else {
-    alert('This hotel is already saved.');
-}
+} 
 }
 
 // Function to display saved restaurants
@@ -129,17 +125,7 @@ function displaySavedRestaurants() {
   document.getElementById('savedRestaurants').innerHTML = output;
 }
 
-// Function to display saved hotels
-function displaySavedHotels() {
-  let savedHotels = JSON.parse(localStorage.getItem('savedHotels')) || [];
-  let output = '<h2>Saved Hotels: </h2>';
-  if (savedHotels.length === 0) {
-      output += '<p>No hotels saved.</p>';
-  } else {
-      output += '<ul>';
-  }
-  document.getElementById('savedRestaurants').innerHTML = output;
-}
+
 
 // Function to display saved hotels
 function displaySavedHotels() {

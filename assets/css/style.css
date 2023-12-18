@@ -151,7 +151,7 @@
     padding: 20px;
     background-color: #F3F4F6;
     border-radius: 10px;
-    text-align: center;
+    
     
     }
     
@@ -160,13 +160,12 @@
     padding: 20px;
     background-color: #F3F4F6;
     border-radius: 10px;
-    text-align: center;
+    
     }
     
     #removeBtn {
         width: 200px;
-        margin-left: 10px;
-        
+        margin-left: 40px;
         }
     
     @media (max-width: 768px) {
