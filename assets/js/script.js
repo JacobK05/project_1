@@ -58,13 +58,11 @@ async function convertZipAndFindRestaurantsAndHotels() {
     var checkInDate = today.toISOString().split('T')[0];
       var checkOutDate = tomorrow.toISOString().split('T')[0];
 
-      var hotelUrl = `https://tripadvisor16.p.rapidapi.com/api/v1/hotels/searchHotelsByLocation?latitude=${Latitude}&longitude=${Longitude}&checkIn=${checkInDate}&checkOut=${checkOutDate}&pageNumber=1&currencyCode=USD&amenities=restaurant`;
-
-      var hotelResponse = await fetch(hotelUrl, {
+      var hotelResponse = await fetch(`https://tripadvisor16.p.rapidapi.com/api/v1/hotels/searchHotelsByLocation?latitude=${Latitude}&longitude=${Longitude}&checkIn=${checkInDate}&checkOut=${checkOutDate}&pageNumber=1&currencyCode=USD&amenities=restaurant`, {
           method: 'GET',
           headers: {
-              'X-RapidAPI-Key': '5178754b6emsh6445fe33be0ad04p1b6ff8jsnb551a14e9184',
-              'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
+            'X-RapidAPI-Key': 'afa12dde80msh338e2dbe5ad766bp1ed88cjsnb013e32ea0e2',
+            'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
           }
       });
 
@@ -161,7 +159,8 @@ function displaySavedHotels() {
 
 // Add a button to clear local storage
 document.getElementById('removeBtn').addEventListener('click', () => {
-    localStorage.clear();
+    localStorage.removeItem('savedRestaurants');
+    localStorage.removeItem('savedHotels');
     displaySavedRestaurants();
     displaySavedHotels();
   });
