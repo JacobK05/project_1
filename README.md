@@ -17,4 +17,4 @@ This website will functionally like this:
 ![Mock Up Image](./assets/images/Screenshot%202023-12-14%20at%205.58.59%20PM.png)
 
 ## Link
-Ready to explore restaurants & hotel for your plan? Browse this **[Eat & Stay Planning]()**
+Ready to explore restaurants & hotel for your plan? Browse this **[Eat & Stay Planning](https://jacobk05.github.io/project_1/)**
